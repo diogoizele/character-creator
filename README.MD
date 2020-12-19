@@ -2,7 +2,7 @@
 
 [GO TO THE APP](https://diogoizele.github.io/character-creator/)
 
-## the Application is based on a rpg character creator, with the custody options of:
+## The Application is based on a rpg character creator, with the custody options of:
 * ### Basic character information
 * ### Attributes
 * ### Status
