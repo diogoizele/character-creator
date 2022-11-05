@@ -1,5 +1,11 @@
+import { Home } from "screens";
+
 function App() {
-  return <div>opaaa</div>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;

@@ -1,28 +1,33 @@
+import uuid from "react-uuid";
+
+import { NullishOr } from "util/types";
 import { Attributes } from "../attributes/attributes.model";
 import { Race } from "../race/race.model";
 
 export class Character {
-  private name: string;
-  private race: Race;
-  private attributes: Attributes;
-  private image: string;
-  private level: number;
-  private experience: number;
-  private basicDamage: number;
-  private basicHealth: number;
-  private basicMana: number;
+  private id: string;
+  private name?: string;
+  private race?: Race;
+  private attributes?: Attributes;
+  private image?: string;
+  private level?: number;
+  private experience?: number;
+  private basicDamage?: number;
+  private basicHealth?: number;
+  private basicMana?: number;
 
   constructor(
-    name: string,
-    race: Race,
-    attributes: Attributes,
-    image: string,
-    level: number,
-    experience: number,
-    basicDamage: number,
-    basicHealth: number,
-    basicMana: number
+    name?: string,
+    race?: Race,
+    attributes?: Attributes,
+    image?: string,
+    level?: number,
+    experience?: number,
+    basicDamage?: number,
+    basicHealth?: number,
+    basicMana?: number
   ) {
+    this.id = uuid();
     this.name = name;
     this.race = race;
     this.attributes = attributes;
@@ -34,39 +39,43 @@ export class Character {
     this.basicMana = basicMana;
   }
 
-  public getName(): string {
+  public getId(): NullishOr<string> {
+    return this.id;
+  }
+
+  public getName(): NullishOr<string> {
     return this.name;
   }
 
-  public getRace(): Race {
+  public getRace(): NullishOr<Race> {
     return this.race;
   }
 
-  public getAttributes(): Attributes {
+  public getAttributes(): NullishOr<Attributes> {
     return this.attributes;
   }
 
-  public getImage(): string {
+  public getImage(): NullishOr<string> {
     return this.image;
   }
 
-  public getLevel(): number {
+  public getLevel(): NullishOr<number> {
     return this.level;
   }
 
-  public getExperience(): number {
+  public getExperience(): NullishOr<number> {
     return this.experience;
   }
 
-  public getBasicDamage(): number {
+  public getBasicDamage(): NullishOr<number> {
     return this.basicDamage;
   }
 
-  public getBasicHealth(): number {
+  public getBasicHealth(): NullishOr<number> {
     return this.basicHealth;
   }
 
-  public getBasicMana(): number {
+  public getBasicMana(): NullishOr<number> {
     return this.basicMana;
   }
 
