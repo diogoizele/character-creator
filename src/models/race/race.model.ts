@@ -1,4 +1,6 @@
-export class Race {
+import type { RaceInterface } from "shared/interfaces";
+
+export class Race implements RaceInterface {
   private id: number;
   private name: string;
   private description: string;
